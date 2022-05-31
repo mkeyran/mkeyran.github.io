@@ -1,5 +1,6 @@
 ---
 share: True
+category: notatki
 ---
 **notatki**{: #notatki .hash}  
  **blog**{: #blog .hash}  
