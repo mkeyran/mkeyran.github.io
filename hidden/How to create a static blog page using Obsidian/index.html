@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://mkeyran.github.io/hidden/How%20to%20create%20a%20static%20blog%20page%20using%20Obsidian/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>How to create a static blog page using Obsidian - Notatki</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Notatki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hidden <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">How to create a static blog page using Obsidian</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#step-1-create-a-repository-for-the-blog" class="nav-link">Step 1. Create a repository for the blog</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#create-a-repo" class="nav-link">Create a repo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#add-an-initial-content-to-the-repository" class="nav-link">Add an initial content to the repository</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#enable-the-github-pages-in-the-repo" class="nav-link">Enable the GitHub Pages in the repo.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#check-that-the-site-is-working" class="nav-link">Check that the site is working</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#step-2-install-mkdocs-and-plugins" class="nav-link">Step 2. Install mkdocs and plugins</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#step-3-create-a-blog-structure" class="nav-link">Step 3. Create a blog structure</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#create-a-blog" class="nav-link">Create a blog</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#test-that-it-works" class="nav-link">Test that it works</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#customize-it" class="nav-link">Customize it</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#step-4-install-obs2mk" class="nav-link">Step 4. Install Obs2MK</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#step-5-set-up-obs2mk" class="nav-link">Step 5. Set up Obs2MK</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><strong>notatki</strong>{: #notatki .hash}<br />
+<strong>blog</strong>{: #blog .hash}<br />
+<strong>wip</strong>{: #wip .hash}  </p>
+<h1 id="step-1-create-a-repository-for-the-blog">Step 1. Create a repository for the blog</h1>
+<h2 id="create-a-repo">Create a repo</h2>
+<p>Go to github.com and create a repo there with the name <em>username</em>.github.io, where <em>username</em> is your username (or organization name) on GitHub.</p>
+<h2 id="add-an-initial-content-to-the-repository">Add an initial content to the repository</h2>
+<pre><code class="language-bash">$ git clone https://github.com/&lt;username&gt;/&lt;username&gt;.github.io
+$ cd &lt;username&gt;.github.io
+$ echo &quot;Hello World&quot; &gt; index.html
+$ git add --all
+$ git commit -m &quot;Initial commit&quot;
+$ git push -u origin main
+</code></pre>
+<h2 id="enable-the-github-pages-in-the-repo">Enable the GitHub Pages in the repo.</h2>
+<p>Go to the  repository Settings -&gt; Pages and see that the site is published![[Pasted image 20220531100228.png]] </p>
+<h2 id="check-that-the-site-is-working">Check that the site is working</h2>
+<p>Go to the <code>https://&lt;username&gt;.github.io/</code> and check that you see 'Hello World' there.</p>
+<h1 id="step-2-install-mkdocs-and-plugins">Step 2. Install mkdocs and plugins</h1>
+<pre><code class="language-shell">$ yay -S mkdocs mkdocs-bootswatch mkdocs-material-extensions mkdocs-rss-plugin
+</code></pre>
+<p>or just</p>
+<pre><code class="language-bash">$ pip install mkdocs mkdocs-bootswatch mkdocs-material-extensions mkdocs-rss-plugin
+</code></pre>
+<h1 id="step-3-create-a-blog-structure">Step 3. Create a blog structure</h1>
+<h2 id="create-a-blog">Create a blog</h2>
+<pre><code class="language-bash">$ BLOG_PATH=&lt;the path to the cloned github repo&gt;
+$ BLOG_NAME=&lt;the name of your blog&gt;
+$ cd $BLOG_PATH
+$ mkdocs new $BLOG_NAME
+</code></pre>
+<h2 id="test-that-it-works">Test that it works</h2>
+<pre><code class="language-bash">$ cd $BLOG_PATH/$BLOG_NAME
+$ mkdocs serve
+</code></pre>
+<p>You should be able to see the default starting page
+![[Pasted image 20220531093424.png]]</p>
+<h2 id="customize-it">Customize it</h2>
+<p>Edit the <code>mkdocs.yml</code>: </p>
+<pre><code>
+site_name: &lt;Desired site name&gt;
+site_description: &lt;Site description&gt;
+site_url: https://&lt;username&gt;.github.io/
+</code></pre>
+<p>Add an empty <code>custom_attributes.css</code> to the <code>docs/assets/css</code>. It is requred for callouts to work. We'll fill it later.</p>
+<pre><code>
+$ mkdir -p docs/assets/css
+$ touch docs/assets/css/custom_attributes.css
+</code></pre>
+<h1 id="step-4-install-obs2mk">Step 4. Install Obs2MK</h1>
+<pre><code class="language-bash">$ poetry init
+$ poetry shell
+$ poetry add git+https://github.com/Mara-Li/obsidian-mkdocs-publisher-python.git@main
+</code></pre>
+<h1 id="step-5-set-up-obs2mk">Step 5. Set up Obs2MK</h1>
+<p>Issue </p>
+<pre><code class="language-shell">$ obs2mk
+</code></pre>
+<ol>
+<li>It will ask where the obsidian vault is located. Provide the path. </li>
+<li>It will ask for the path to the cloned github repository. Do that as well.</li>
+<li>Specify an URL of your blog (<code>https://&lt;username&gt;.github.io/</code>).</li>
+<li>Specify the frontmatter key indicating that the note is ready to be published. You can safely leave it as it is.</li>
+<li>Specify the root for the notes. <code>/</code> makes them live in the root of the site's tree.</li>
+<li>Leave the key for citation as is</li>
+</ol>
+<p>!!! WARNING
+    I had to patch several files to make it work: 
+    1. The file_checking.py:231 in the Obs2MK package, as it didn't have quotes around <code>docs</code>
+        2. <code>config.py:468</code>, IMG = Path(BASEDIR, "/docs/assets/img/")-   IMG = Path(BASEDIR, "docs/assets/img/")</p>
+<p>https://forum.obsidian.md/t/obsidian-mkdocs-publisher-a-free-publish-alternative/29540</p>
+<p>https://github.com/Mara-Li/obsidian-mkdocs-publisher-python/tree/v3.7.1</p>
+<p>https://mara-li.github.io/obsidian_mkdocs_publisher_docs/documentation/create%20the%20blog/</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
